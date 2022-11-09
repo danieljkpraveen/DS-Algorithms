@@ -3,9 +3,6 @@ Note: all the input strings are already lowercase.
 """
 
 
-from operator import le
-
-
 def find_unique(input_string):
     frequency = {}
     for letter in input_string:
@@ -22,3 +19,5 @@ def find_unique(input_string):
 if __name__ == '__main__':
     input_string = "crunchy"
     print(find_unique(input_string))
+
+# __________________ o(n+m) complexity__________________

@@ -18,3 +18,5 @@ def fill_none(array):
 if __name__ == '__main__':
     array = [1, None, 2, 3, None, None, 5, None]
     print(fill_none(array))
+
+# __________________ o(n) complexity__________________

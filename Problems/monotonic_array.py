@@ -12,3 +12,5 @@ def find_monotone(array):
 if __name__ == '__main__':
     input_array = [6, 5, 4, 4]
     print(find_monotone(input_array))
+
+# __________________ o(n+m) complexity__________________

@@ -1,4 +1,4 @@
-"""Given an array nums, write a function to move all zeroes to the end of it while maintaining the relative order of 
+"""Given an array nums, write a function to move all zeroes to the end/beginning of it while maintaining the relative order of 
 the non-zero elements.
 """
 
@@ -18,11 +18,13 @@ def move_start(num_list):
             num_list.remove(0)
             frequency += 1
     for f in range(frequency):
-        num_list.insert(0, 0)
+        num_list.insert(0, 0)    #(index, value)
     return num_list
 
 
 if __name__ == '__main__':
     num_list = [0, 1, 0, 3, 12]
     print(move_end(num_list))
-    print(move_start(num_list))
+    # print(move_start(num_list))
+
+# __________________ o(n+m) complexity__________________

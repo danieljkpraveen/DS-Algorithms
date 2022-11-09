@@ -42,8 +42,10 @@ def list_to_str(string_list):
     reversed_string = "".join(s)
     return reversed_string
 
+
+#  ________________________________________main________________________________________s
 if __name__ == '__main__':
-    """number = input("Enter number: ")
-    reverse_integer(number)"""
-    input_string = input("Enter string: ")
-    reverse_string(input_string)
+    number = input("Enter number: ")
+    reverse_integer(number)
+    """input_string = input("Enter string: ")
+    reverse_string(input_string)"""
