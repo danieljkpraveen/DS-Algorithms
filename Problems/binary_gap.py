@@ -22,6 +22,6 @@ def find_gap(n):
 if __name__ == '__main__':
     n = int(input("Enter n: "))
     if (n > 0 and
-        n < 2147483647):
+        n <= 2147483647):
         find_gap(n)
 
