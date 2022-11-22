@@ -4,7 +4,7 @@ binary gap is 5. N is within 1 - 2147483647
 """
 
 
-def find_gap(n):
+"""def find_gap(n):
     raw_binary = bin(n)
     raw_binary = raw_binary.split('b')
     binary_number = str(raw_binary[1])
@@ -17,6 +17,16 @@ def find_gap(n):
             zero_counter.append(counter)
             counter = 0
     print(max(zero_counter))
+"""
+
+
+def find_gap(n):
+    raw_binary = bin(n)
+    raw_binary = raw_binary.split('b')
+    binary_number = str(raw_binary[1])
+    print(binary_number)
+    zero_counter = [zero if zero == '0' else "" for zero in binary_number]
+    
 
 
 if __name__ == '__main__':
