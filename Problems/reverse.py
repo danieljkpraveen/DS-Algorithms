@@ -19,9 +19,7 @@ def reverse_integer(number):
         print(concat_number(reversed_list))
 
 def concat_number(num_list):
-    #  function to convert a list of numbers of type string to type integer
-    s = [integer for integer in num_list]
-    num_string = "".join(s)
+    num_string = "".join(num_list)
     reversed_number = int(num_string)
     return reversed_number
 
@@ -38,8 +36,7 @@ def reverse_string(input_string):
     print(list_to_str(reversed_list))
 
 def list_to_str(string_list):
-    s = [item for item in string_list]
-    reversed_string = "".join(s)
+    reversed_string = "".join(string_list)
     return reversed_string
 
 
@@ -47,5 +44,6 @@ def list_to_str(string_list):
 if __name__ == '__main__':
     number = input("Enter number: ")
     reverse_integer(number)
-    """input_string = input("Enter string: ")
+    """
+    input_string = input("Enter string: ")
     reverse_string(input_string)"""
