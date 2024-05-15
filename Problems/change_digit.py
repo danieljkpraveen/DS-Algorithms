@@ -15,21 +15,17 @@ change are : "021","021","024","027","042","072","222","522" and "822
 """
 
 
-def find_divisible(S):
-    numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-    divisibles = []
-    for i in range(len(S)):
-        for n in range(len(numbers)):
-            temp_num = S.replace(S[i], numbers[n])
-            if (int(temp_num) % 3 == 0):
-                divisibles.append(temp_num)
-    final = []
-    for d in divisibles:
-        if d not in final:
-            final.append(d)
-    print(final)
+def find_divisible(number: str) -> str:
+    divisibles = set()
+    for index in range(len(number)):
+        for swap in '0123456789':
+            swapped_number = int(number[:index] + swap + number[index+1:])
+            if swapped_number % 3 == 0:
+                divisibles.add(swapped_number)
+    return f"divisible numbers are \n{divisibles}"
 
 
 if __name__ == '__main__':
-    S = '23'
-    find_divisible(S)
+    number: str = input("Enter number: ")
+    result = find_divisible(number)
+    print(result)

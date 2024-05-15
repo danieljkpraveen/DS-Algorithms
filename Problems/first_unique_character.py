@@ -10,14 +10,14 @@ def find_unique(input_string):
             frequency[letter] = 1
         else:
             frequency[letter] += 1
-    for letter in range(len(input_string)):
-        if frequency[input_string[letter]] == 1:
-            return f"character {input_string[letter]} appears {frequency[input_string[letter]]} time"
+    for letter in input_string:
+        if frequency[letter] == 1:
+            return f"character {letter} appears {frequency[letter]} time"
     return f"{-1} no unique characters"
 
 
 if __name__ == '__main__':
-    input_string = "crunchy"
+    input_string = "bob"
     print(find_unique(input_string))
 
 # __________________ o(n+m) complexity__________________

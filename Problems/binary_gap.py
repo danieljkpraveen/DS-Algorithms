@@ -2,36 +2,29 @@
 Example: N = 1041 returns 5, binary representation of 1041 is 10000010001 and the longest
 binary gap is 5. N is within 1 - 2147483647
 """
+from typing import List
 
 
-def find_gap(n):
-    raw_binary = bin(n)
-    raw_binary = raw_binary.split('b')
-    binary_number = str(raw_binary[1])
+def find_gap(number: int) -> str:
+    raw_binary: str = bin(number)
+    binary_list: List[str] = raw_binary.split('b')
+    binary_number: str = str(binary_list[1])
     zero_counter = []
     counter = 0
-    for i in range(len(binary_number)):
-        if (binary_number[i] == '0'):
+    for num in binary_number:
+        if (num == '0'):
             counter += 1
-        elif (binary_number[i] == '1'):
+        elif (num == '1'):
             zero_counter.append(counter)
             counter = 0
-    print(max(zero_counter))
-
-
-
-"""def find_gap(n):
-    raw_binary = bin(n)
-    raw_binary = raw_binary.split('b')
-    binary_number = str(raw_binary[1])
-    print(binary_number)
-    zero_counter = [zero if zero == '0' else "" for zero in binary_number]
-"""
+    longest_number: int = max(zero_counter)
+    return f"The longest sequence of zeros for {number} is {longest_number}"
 
 
 if __name__ == '__main__':
-    n = int(input("Enter n: "))
-    if (n > 0 and
-        n <= 2147483647):
-        find_gap(n)
-
+    number: int = int(input("Enter number: "))
+    if number < 1 or number > 2147483647:
+        print("number out of range")
+    else:
+        result = find_gap(number)
+        print(result)

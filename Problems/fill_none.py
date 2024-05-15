@@ -2,21 +2,24 @@
 non None value in the array
 """
 
+from typing import List
 
-def fill_none(array):
-    valid = 0
+
+def fill_none(array: List) -> str:
+    valid: int = 0
     filled = []
-    for a in array:
-        if a is not None:
-            filled.append(a)
-            valid = a
+    for item in array:
+        if item is not None:
+            filled.append(item)
+            valid = item
         else:
             filled.append(valid)
-    return filled
+    return f"Filled array is \n{filled}"
 
 
 if __name__ == '__main__':
-    array = [1, None, 2, 3, None, None, 5, None]
-    print(fill_none(array))
+    array: List = [1, None, 2, 3, None, None, 5, None]
+    result: str = fill_none(array)
+    print(result)
 
 # __________________ o(n) complexity__________________
