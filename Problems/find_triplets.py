@@ -29,7 +29,7 @@ Explanation: The only possible triplet sums up to 0.
 from typing import List
 
 
-def three_sum(nums: List[int]) -> List[List[int]]:
+def find_triplets(nums: List[int]) -> List[List[int]]:
     result = []
     nums.sort()
     for index, num in enumerate(nums[:-2]):
@@ -54,5 +54,5 @@ def three_sum(nums: List[int]) -> List[List[int]]:
 
 if __name__ == '__main__':
     nums = [-1, 0, 1, 2, -1, -4]
-    triplets: List[List[int]] = three_sum(nums)
+    triplets: List[List[int]] = find_triplets(nums)
     print(f"The triplets for array : {nums} is\n{triplets}")

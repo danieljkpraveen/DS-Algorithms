@@ -1,20 +1,24 @@
-def search(list, item):
-    low = 0
-    high = len(list)-1
+from typing import List
+
+
+def search(numbers: List[int], query: int) -> str:
+    low: int = 0
+    high: int = len(numbers)-1
 
     while low <= high:
-        mid = (low + high)
-        guess = list[mid]
-        if guess == item:
-            return mid
-        if guess > item:
+        mid: int = (low + high)
+        guess: int = numbers[mid]
+        if guess == query:
+            return f"index of {query} is {mid}"
+        if guess > query:
             high = mid - 1
         else:
             low = mid + 1
-    return None
+    return f"{query} not found"
 
 if __name__ == '__main__':
-    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    item = 5
-    index = search(list, item)
-    print(f"ITEM {list[index]} AT INDEX: {index}")
+
+    numbers: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    query: int = int(input("Enter a number (1-10): "))
+    result = search(numbers, query)
+    print(result)
