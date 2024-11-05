@@ -4,6 +4,7 @@ Program to find the biggest of three numbers
 
 def find_biggest(num1: int, num2: int, num3: int) -> str:
     biggest: int = 0
+    test: int = 1
 
     if num1>num2 and num1>num3:
         biggest = num1
